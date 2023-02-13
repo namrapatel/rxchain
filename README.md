@@ -1,3 +1,7 @@
+# rxchain
+
+A blockchain that enables reactive programming in smart contracts, built on top of Optimism's Bedrock.
+
 <div align="center">
   <br />
   <br />
