@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.15;
 
-import { Predeploys } from "../libraries/Predeploys.sol";
-
 contract ReactionManager {
 
     struct Reaction {
@@ -38,6 +36,7 @@ contract ReactionManager {
         Reaction storage reaction = reactions[watchedAddress];
         require(reaction.contractAddress != address(0), "No reaction registered for this address");
 
+        // TODO: Optionally log the returnData
         (bool success, bytes memory returnData) = reaction.contractAddress.call(abi.encodeWithSignature(reaction.functionSignature, reaction.parameters));
         require(success, "Call to reaction contract failed");
     }

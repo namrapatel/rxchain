@@ -104,4 +104,9 @@ library Predeploys {
      * @notice Address of the L1FeeVault predeploy.
      */
     address internal constant L1_FEE_VAULT = 0x420000000000000000000000000000000000001A;
+
+    /**
+     * @notice Address of the ReactionManager predeploy.
+     */
+    address internal constant REACTION_MANAGER = 0x42000000000000000000000000000000000000A0;
 }
